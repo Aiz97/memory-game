@@ -72,6 +72,8 @@ function checkMatch () {
     const cards = document.querySelectorAll('img')
     const optionOneId = cardsChosenIds[0]
     const optionTwoId = cardsChosenIds[1]
+    const playAgain = document.querySelector('.button')
+
     if (optionOneId == optionTwoId) {
         cards[optionOneId].setAttribute('src', './images/blank.png')
         cards[optionTwoId].setAttribute('src', './images/blank.png')
@@ -97,6 +99,7 @@ function checkMatch () {
 
     if(cardsWon.length == (cardArray.length/2)){
         resultDisplay.textContent = "Congratulations, you found them all!"
+        playAgain.style.display = "block";
     }
 }
 
